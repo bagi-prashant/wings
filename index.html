@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WING's</title>
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+  <style>
+    *{
+      margin: 0;
+      font-family: arial;
+      box-sizing: border-box;
+    }
+    .menu{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+   
+    .nav{
+      background: linear-gradient(to right,rgb(114, 1, 252),rgb(176, 3, 250));
+      color: white;
+      padding: 10px;
+      position: relative;
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile{
+      display: flex;
+      height: 55px;
+      width: 55px;
+      background-image: url(PRASHANT.jpg);
+      background-size: cover;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-right: -1111px;
+    }
+    
+    .icon{
+      cursor: pointer;
+      font-size: 45px;
+      margin-right: 30px;
+    }
+    .nav-items{
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    padding-top: 0px;
+    margin: 74px;
+    right: -70px;
+    background: rgba(0, 0, 0, 0.8);
+    }
+    .nav-items ul{
+      list-style-type: none;
+    margin-left: -40px;
+    }
+    .nav-items li{
+      background: linear-gradient(to right, rgb(24, 49, 175), rgb(3, 85, 126));
+      padding: 15px;
+      margin: 2px 0;
+    }
+    .nav-items li:hover{
+      background: linear-gradient(to left,rgba(25, 50, 138, 0.756),rgba(5, 73, 100, 0.734));
+    }
+    .nav-items a{
+      color: white;
+      text-decoration: none;
+    }
+    .hide{
+      display: none;
+    }
+    img{
+      height: 60px;
+      width: 170px;
+    }
+    span{
+      font-size: 45px;
+    }
+    span a{
+      text-decoration: none;
+      color: white;
+    }
+   
+  .container {
+    display: flex;
+    gap: 8px;
+    min-height: 1060px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 80px;
+    background: linear-gradient(to left,rgba(25, 50, 138, 0.756),rgba(5, 73, 100, 0.734));
+  }
+
+  .item:nth-child(1) {
+    width: 25%;
+    height: 570px;
+    background-image: url(imgone.png);
+    background-size: cover;
+  }
+
+  .item:nth-child(3){
+    flex-grow: 1;
+    background-image: url(img5.avif);
+    height: 450px;
+    width: 1px;
+    background-size: cover;
+  }
+
+  footer{
+    background:linear-gradient(to right, rgb(38, 67, 78), rgba(63, 72, 93, 0.74));
+    height: 350px;
+    width: 100%;
+  }
+
+  .box {
+    position: relative;
+    width: 100%;
+  }
+  .card{
+    height: 420px;
+    width: 290px;
+    padding-top: 110px;
+    margin-bottom: 20px;
+  }
+  .container p{
+    background-color: white;
+    color: rgba(46, 33, 58, 0.795);
+    font-size: 1.3rem;
+    height: 80px;
+    margin-top: 0px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+  }
+
+  .image {
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    height: 360px;
+    margin-top: -110px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    display: flex;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .box:hover .image {
+    opacity: 0.3;
+  }
+
+  .box:hover .middle {
+    opacity: 1;
+  }
+
+  .text {
+    background: linear-gradient(to right, rgb(212 133 228 / 93%), rgb(84 163 169 / 81%));
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    cursor: pointer;
+  }
+
+  footer .flex{
+    display: inline-grid;
+    margin-left: 250px;
+    padding-top: 30px;
+  }
+
+  ul li{
+    display: flex;
+    padding: 3px;
+    font-family: arial;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .flex ul{
+    padding: 20px;
+  }
+  .flex{
+    font-weight: bold;
+    font-family: arial;
+    font-size: 20px;
+  }
+  button{
+    display: flex;
+    margin-inline: auto;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(to right, rgb(212 133 228 / 93%), rgb(84 163 169 / 81%));
+    font-size: 0.99rem;
+  }
+  button a{
+    text-decoration: none;
+    font-family: fantasy;
+    color: rgba(25, 2, 29, 0.718); 
+  }
+
+  /* text a */
+  .text a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(244, 240, 240);
+  
+  }
+
+
+    /* Responsive Media Queries */
+  @media (max-width: 1200px) {
+    footer .flex {
+      margin-left: 150px;
+    }
+    .profile {
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    footer .flex {
+      margin-left: 80px;
+    }
+    .nav-items {
+      right: -20px;
+    }
+    .profile {
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      height: 450px;
+    }
+    footer .flex {
+      display: block;
+      margin-left: 40px;
+      padding-top: 20px;
+    }
+    .card {
+      width: 45%;
+      min-width: 200px;
+    }
+    .nav-items {
+      width: 180px;
+      right: 0;
+      margin: 74px 10px;
+    }
+    span {
+      font-size: 40px;
+    }
+    .icon {
+      font-size: 40px;
+      margin-right: 15px;
+    }
+    .profile {
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    footer {
+      height: 550px;
+    }
+    .card {
+      width: 90%;
+      max-width: 290px;
+    }
+    .nav-items {
+      width: 100%;
+      right: 0;
+      margin: 74px 0;
+    }
+    span {
+      font-size: 35px;
+    }
+    .icon {
+      font-size: 35px;
+    }
+    .profile {
+      height: 45px;
+      width: 45px;
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    footer {
+      height: 600px;
+    }
+    span {
+      font-size: 30px;
+    }
+    .icon {
+      font-size: 30px;
+    }
+    .profile {
+      margin-right: 5px;
+    }
+  }
+ 
+</style>
+</head>
+<body>
+  <div class="menu">
+    <div class="nav">
+      <span><a href="#">WING's</a></span>
+      <div class="profile"></div>
+      <span class="material-symbols-outlined icon" onclick="fun()">menu</span>
+    </div>
+    <div class="nav-items hide">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Faqs</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="box">
+       <img src="imgone.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="file:///C:/Users/prash/OneDrive/Desktop/Web-Design_Practice/wing's/buy%20now%20one.html">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p>
+                  </div> 
+
+    <div class="card">
+      <div class="box">
+       <img src="imgone.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+
+    <div class="card">
+      <div class="box">
+       <img src="imgone.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+
+    <div class="card">
+      <div class="box">
+       <img src="imgone.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+
+    <div class="card">
+      <div class="box">
+       <img src="imgone.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+    
+    <div class="card">
+      <div class="box">
+       <img src="org.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+    
+    <div class="card">
+      <div class="box">
+       <img src="org.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+    
+    <div class="card">
+      <div class="box">
+       <img src="org.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+    
+    <div class="card">
+      <div class="box">
+       <img src="org.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+              </div>
+                <p>See more</p></div>
+    
+    <div class="card">
+      <div class="box">
+       <img src="org.png" alt="Avatar" class="image" style="width:100%">
+         <div class="middle">
+          <div class="text"><a href="/">Buy Now</a></div>
+            </div>
+                 <p>See more</p></div>
+  </div>
+
+<footer>
+<div class="flex"> Get to Know Us
+  <ul>
+    <li>About wings</li>
+    <li>Careers</li>
+    <li>Press Releases</li>
+    <li>Wings science</li>
+  </ul>
+</div>
+
+<div class="flex">Connect with Us
+  <ul>
+    <li>Instagram</li>
+    <li>Facebook</li>
+    <li>Telegram</li>
+  </ul>
+</div>
+
+<div class="flex">Let Us Help You
+  <ul>
+    <li>Your account</li>
+    <li>Sell on wings</li>
+    <li>Help</li>
+  </ul>
+</div>
+
+<button><a href="file:///C:/Users/prash/OneDrive/Desktop/Web-Design_Practice/wing's/index.html">Top to Home page</a></button>
+
+</footer>
+
+
+  <script>
+    // Menu bar function
+  let nav=document.querySelector(".nav-items")
+  function fun(){
+    nav.classList.toggle("hide")
+  }
+
+
+
+// Add this script at the end of your existing script section
+document.addEventListener('DOMContentLoaded', function() {
+    // Create popup elements
+    const popupHTML = `
+        <div class="popup-overlay" id="loginPopup" style="
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        ">
+            <div class="popup-content" style="
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                position: relative;
+            ">
+                <button class="close-btn" id="closePopup" style="
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                ">&times;</button>
+                <h2 style="margin-top: 0; color: #333;">Login</h2>
+                <form id="loginForm">
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+                        <input type="email" id="email" name="email" required style="
+                            width: 100%;
+                            padding: 8px;
+                            border: 1px solid #ddd;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        ">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold;">Password:</label>
+                        <input type="password" id="password" name="password" required style="
+                            width: 100%;
+                            padding: 8px;
+                            border: 1px solid #ddd;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        ">
+                    </div>
+                    <div class="popup-actions" style="
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 10px;
+                    ">
+                        <button type="button" class="cancel-btn" id="cancelLogin" style="
+                            padding: 8px 16px;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            background-color: #f44336;
+                            color: white;
+                        ">Cancel</button>
+                        <button type="submit" class="submit-btn" style="
+                            padding: 8px 16px;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            background-color: #4CAF50;
+                            color: white;
+                        ">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    // Add popup to body
+    document.body.insertAdjacentHTML('beforeend', popupHTML);
+    
+    // Get DOM elements
+    const profile = document.querySelector('.profile');
+    const loginPopup = document.getElementById('loginPopup');
+    const closePopup = document.getElementById('closePopup');
+    const cancelLogin = document.getElementById('cancelLogin');
+    const loginForm = document.getElementById('loginForm');
+    
+    // Show popup when profile is clicked
+    profile.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event bubbling
+        loginPopup.style.display = 'flex';
+    });
+    
+    // Close popup when X button is clicked
+    closePopup.addEventListener('click', function() {
+        loginPopup.style.display = 'none';
+    });
+    
+    // Close popup when Cancel button is clicked
+    cancelLogin.addEventListener('click', function() {
+        loginPopup.style.display = 'none';
+    });
+    
+    // Close popup when clicking outside the content
+    loginPopup.addEventListener('click', function(e) {
+        if (e.target === loginPopup) {
+            loginPopup.style.display = 'none';
+        }
+    });
+    
+    // Handle form submission
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        // Here you would typically send the data to a server
+        console.log('Login attempted with:', { email, password });
+        
+        // For demo purposes, just show an alert
+        alert(`Login submitted!\nEmail: ${email}\nPassword: ${password.replace(/./g, '*')}`);
+        
+        // Close the popup
+        loginPopup.style.display = 'none';
+        
+        // Reset the form
+        loginForm.reset();
+    });
+});
+</script>
+
+</body>
+</html>
